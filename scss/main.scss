@@ -1,0 +1,333 @@
+@import "partials/reset";
+@import "partials/grid";
+@import "partials/mixins";
+
+//first section
+section:nth-of-type(1) {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
+  background: url("./../images/main-banner.jpg") no-repeat bottom;
+  background-size: cover;
+  padding-bottom: 56.25%;
+  width: 100%;
+  height: 650px;
+
+  .col-1:nth-of-type(2) {
+    margin-top: 50px;
+    background: url("./../images/logo.png") no-repeat;
+  }
+
+  .col-4{
+    margin-top: 40px;
+    color: gray;
+    text-align: center;
+    font-weight: bold;
+
+    div{
+      width: 25%;
+      float: left;
+    }
+    div:hover{
+      color: cyan;
+    }
+  }
+  section{
+    .col-8 {
+      div:first-of-type {
+        background: url("./../images/main-text.svg") no-repeat left;
+        padding-bottom: 56.25%;
+      }
+      p{
+        width: 90%;
+        margin: -40px auto 0 auto;
+        text-align: center;
+        color: gray;
+      }
+      div:last-of-type{
+        width: 20%;
+        margin: 40px auto 0 auto;
+        border-radius: 20px;
+        padding: 10px;
+        border: 1px solid gray;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        text-decoration: none;
+        color: white;
+        a{
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+//second section
+section:nth-of-type(2){
+  .col-5{
+    background-color: white;
+    height: 50px;
+    margin-top: -3.25%;
+  }
+ .col-2{
+   height: 50px;
+   width: 100%;
+   background: url('./../images/banner-bottom.svg') no-repeat center;
+   margin-top: -3.7%;
+  }
+  .col-5:last-of-type{
+    width: 44%;
+    float: right;
+    margin-top: -3.7%;
+  }
+}
+
+//third section
+section:nth-of-type(3){
+  text-align: center;
+  font-weight: bold;
+  .col-4:nth-of-type(2){
+   p:first-of-type{
+     margin: 30px auto 0 auto;
+     font-size: 20px;
+     width: 27%;
+     height: 100px;
+     border-bottom: 3px solid cyan;
+   }
+    p:last-of-type{
+      width: 75%;
+      height: 40px;
+      margin: -60px auto 0 auto;
+      font-size: 40px;
+      border: none;
+    }
+  }
+ }
+
+//fourth section
+section:nth-of-type(4){
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+
+  h4{ padding: 15px 0 15px 0; }
+  p{ color: gray; }
+
+ .col-3:first-of-type{
+     div{
+    @include divStyle();
+      background: url('./../images/img2.png') no-repeat center/cover;
+    }
+   }
+
+   .col-3:nth-of-type(2){
+    div{
+      @include divStyle();
+      background: url('./../images/img1.png') no-repeat center/cover;
+    }
+  }
+  .col-3:last-of-type{
+    div{
+      @include divStyle();
+      background: url('./../images/img3.png') no-repeat center/cover;
+    }
+  }
+
+  button {
+    @include btnStyle();
+  }
+  button:hover{
+    @include btnStyleHover();
+  }
+}
+
+//sfifth section
+section:nth-of-type(5) {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
+  background: url("./../images/banner-paralax.jpg") no-repeat center/cover;
+  background-size: cover;
+  width: 100%;
+  height: 450px;
+  p:first-of-type {
+    color: white;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 150px;
+    font-size: 4em;
+    span {
+      color: cyan;
+    }
+  }
+  p:last-of-type{
+    padding-top: 30px;
+    text-align: center;
+    color: gray;
+    font-size: 1em;
+  }
+}
+
+//sixt section
+section:nth-of-type(6){
+  text-align: center;
+  font-weight: bold;
+  .col-4{
+    background-color: lightgray;
+    height: 250px;
+  }
+  .col-4:nth-of-type(2){
+    p:first-of-type{
+      margin: 30px auto 0 auto;
+      font-size: 20px;
+      width: 40%;
+      height: 150px;
+      border-bottom: 3px solid cyan;
+    }
+    p:last-of-type{
+      width: 90%;
+      height: 40px;
+      margin: -90px auto 0 auto;
+      font-size: 40px;
+      border: none;
+    }
+  }
+}
+
+// seventh section
+section:nth-of-type(7){
+  margin-top: 250px;
+  display: flex;
+  justify-content: center;
+  background-color: lightgray;
+
+  h5, p{ text-align: center; }
+  h5{ padding: 15px 0 15px 0; }
+
+  .col-2:first-of-type{
+    div{
+      @include divStyle();
+      background: url('./../images/photo1.png') no-repeat center/cover;
+      border-radius: 50%;
+    }
+  }
+
+  .col-2:nth-of-type(2){
+    div{
+      @include divStyle();
+      background: url('./../images/photo2.png') no-repeat center/cover;
+      border-radius: 50%;
+    }
+  }
+  .col-2:nth-of-type(3){
+    div{
+      @include divStyle();
+      background: url('./../images/photo3.png') no-repeat center/cover;
+      border-radius: 50%;
+    }
+  }
+  .col-2:last-of-type{
+    div{
+      @include divStyle();
+      background: url('./../images/photo4.png') no-repeat center/cover;
+      border-radius: 50%;
+    }
+  }
+button{
+  @include btnStyle();
+  width: 60%;
+  margin-left: 20%;
+}
+button:hover{
+  @include btnStyleHover();
+}
+}
+
+// eighth section
+section:nth-of-type(8){
+  text-align: center;
+  font-weight: bold;
+
+  p:first-of-type{
+    margin: 50px auto 0 auto;
+    width: 20%;
+    height: 100px;
+    font-size: 1.2em;
+    border-bottom: 2px solid cyan;
+  }
+
+  p:last-of-type{
+    width: 90%;
+    margin: -60px auto 0 auto;
+    font-size: 2.5em;
+  }
+}
+
+//the ninth section
+section:nth-of-type(9) {
+  float: left;
+
+  .col-8 {
+    margin: 50px auto 0 auto;
+    color: gray;
+
+    input {
+      @include stylesForm();
+      width: 50%;
+
+    }
+    input:first-of-type {
+      margin-top: 50px;
+    }
+
+    input:focus {
+      border: 3px solid rgb(8, 8, 8);
+      color: rgb(8, 8, 8);
+      font-weight: bold;
+    }
+
+    textarea {
+      @include stylesForm();
+      width: 100%;
+      height: 75px;
+    }
+
+    textarea:focus {
+      border: 3px solid rgb(8, 8, 8);
+      color: rgb(8, 8, 8);
+      font-weight: bold;
+    }
+
+    button {
+      @include btnStyle();
+      width: 18%;
+    }
+
+    form {
+      p {
+        margin: -25px 0 0 175px;
+        color: rgb(8,8,8);
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+//the tenth section - footer
+section:nth-of-type(10) {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(8, 8, 8);
+  margin-top: 600px;
+  color: white;
+  height: 200px;
+  p{
+   padding: 20px 0 0 0;
+    width: 200px;
+    height: 20px;
+  }
+
+  p:first-of-type{
+    margin-top: 25px;
+  }
+  p:hover{
+    color: cyan;
+  }
+}
